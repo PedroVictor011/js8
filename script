@@ -1,0 +1,7 @@
+let pessoa = {
+  nome: "Ana",
+  idade: 20,
+  falar: function() {
+    console.log("Olá, meu nome é " + this.nome);
+  }
+};
