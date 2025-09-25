@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Objeto Literal - Aluno</title>
+  <script src="script.js"></script>
+</head>
+<body>
+  <h1>Exemplo de Objeto Literal em JavaScript</h1>
+  <p>Abra o console (F12 → Console) para ver os resultados.</p>
+
+  <script>
+  
+    let aluno = {
+      nome: "Pedro",
+      notas: [8, 7, 9],
+
+     
+      calcularMedia: function() {
+        let soma = this.notas.reduce((acc, nota) => acc + nota, 0);
+        return soma / this.notas.length;
+      }
+    };
+
+    
+    let { nome } = aluno;
+    console.log("Nome do aluno:", nome);
+
+ 
+    let novasNotas = [...aluno.notas, 10];
+    console.log("Notas originais:", aluno.notas);
+    console.log("Notas após adicionar nova:", novasNotas);
+
+    
+    console.log("Média do aluno:", aluno.calcularMedia());
+  </script>
+</body>
+</html>
